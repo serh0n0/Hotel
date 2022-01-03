@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <img [src]="logo" alt="" />
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+<ng-container *ngIf="site">
+
+  <ion-slides #MySlider pager="" [options]="sliderOpts  ">
+    <ng-container *ngFor="let item of site">
+      <ion-slide *ngFor="let item of item?.homepage?.slides">
+        <div>
+  
+          <img [src]="item" alt="" />
+         
+        </div>
+      </ion-slide>
+    </ng-container>
+  </ion-slides>
+  <br><br><br>
+<app-reservation></app-reservation>
+<br>
+  <span class="title">Activities</span>
+  <ion-button (click)="swipeNext()"  class="next" ><ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+<ion-button (click)="swipePrev()"  class="back" ><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+  <ion-slides #mySlider>
+    <ion-slide *ngFor="let item of activities"
+  [routerLink]="['/activite/',item?._id]"
+    >
+      <ion-card>
+        <ion-card-title>
+          <img [src]="item?.images[0]" alt="">
+          {{item.name}}
+        </ion-card-title>
+        <ion-card-content>
+          {{item.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+ 
+
+  <app-rooms [room]="room"> </app-rooms>
+
+  <app-footer></app-footer>
+</ng-container>
+<ng-container *ngIf="!site">
+<ion-spinner name="circles"></ion-spinner>
+
+</ng-container>
+
+
+</ion-content>

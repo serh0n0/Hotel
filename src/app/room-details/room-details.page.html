@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{room?.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="room">
+
+  
+  <app-images
+  [images]="room"
+  ></app-images>
+  
+    <ion-card>
+      <ion-card-content>
+        {{room?.description}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+
+      <ion-card-title>
+          Oda özellikleri
+      </ion-card-title>
+      <ion-card-content *ngFor="let item of properties">
+  
+      {{item?.name}}
+    </ion-card-content>
+  
+      </ion-card>
+<app-footer></app-footer>
+</ng-container>
+<ng-container *ngIf="!room">
+<ion-spinner name="circles"></ion-spinner>
+
+</ng-container>
+
+
+</ion-content>

@@ -1,0 +1,14 @@
+:host{
+    ion-footer{
+        ion-toolbar{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            --background: #004251;
+            span{
+                color: white;
+                font-size: 0.78rem;
+            }
+        }
+    }
+}

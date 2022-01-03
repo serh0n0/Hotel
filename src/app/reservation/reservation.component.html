@@ -1,0 +1,36 @@
+
+
+<span name="form" class="reservation">Reservation</span>
+<form [formGroup]="loginForm">
+  <ion-input type="number" placeholder="adult"formControlName="adult"></ion-input>
+  <span *ngIf="adult.invalid&&adult.touched">{{getErrorMessageAdult()}}</span>
+
+  <br> <br>
+  <ion-input type="number" placeholder="children" formControlName="children"></ion-input>
+  <span *ngIf="children.invalid&&children.touched">{{getErrorMessageChildren()}}</span>
+
+
+  <br> <br>
+  <ion-input type="text" placeholder="name" formControlName="name"></ion-input>
+  <span *ngIf="name.invalid&&name.touched">{{getErrorMessageName()}}</span>
+
+  <br> <br>
+  <ion-input inputmode="email" type="email" placeholder="email" formControlName="email"></ion-input>
+  <span *ngIf="email.invalid&&email.touched">{{getErrorMessageEmail()}}</span>
+
+  <br> <br>
+  <ion-input   type="text"   placeholder="Phone number"  formControlName="phoneNumber"></ion-input>
+  <span *ngIf="phoneNumber.invalid&&phoneNumber.touched">{{getErrorMessagePhoneNumber()}}</span>
+
+  <br> <br>
+
+  <ion-input  type="date"  (ionChange)="dateControl()" [min]="date"  formControlName="checkIn" ></ion-input>
+  <span *ngIf="checkIn.invalid&&checkIn.touched">{{getErrorMessageCheckIn()}}</span>
+  <br><br>
+  <ion-input  [value]="dt" [min]="checkIn.value" formControlName="checkOut" [disabled]="checkIn.invalid"  type="date"></ion-input>
+  <span  *ngIf="checkOut.invalid&&checkOut.touched">{{getErrorMessageCheckOut()}}</span> 
+<br><br>
+  
+    <ion-button (click)="loginUser()"  color="success">Send</ion-button>
+    <br><br>
+</form>

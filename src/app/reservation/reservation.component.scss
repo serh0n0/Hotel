@@ -1,0 +1,49 @@
+:host {
+ .reservation {
+  margin-left: 40%;
+  font-weight: 600;
+  font-size: 25px;
+  left: -5%;
+  position: absolute;
+  top: 46%;
+
+ }
+  form {
+
+  
+    span {
+      color:red;
+      margin-left: 14%;
+    }
+    ion-input {
+      width: 80%;
+      margin-left: 10%;
+      border: 2px solid gray;
+      border-radius: 20px;
+      --padding-start:20px ;
+      
+  } 
+  ion-button {
+    width: 50%;
+    margin-bottom: 46px;
+    margin-left: 25%;
+    margin-top: -10px;
+
+  }
+  .checkIn {
+    position: absolute;
+    top: 110.5%;
+    left: 30%;
+    color: red;
+  }
+  .checkOut {
+    position: absolute;
+    top: 121.5%;
+    left: 30%;
+    color: red;
+  }
+  }
+  
+  
+  
+}

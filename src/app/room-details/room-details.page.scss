@@ -1,0 +1,28 @@
+:host {
+  ion-content {
+    }
+    ion-card {
+        opacity: 0.8;
+
+        ion-card-title {
+            text-align: center;
+            font-weight: 500;
+            border-bottom: 2px solid gray;
+            padding: 14px;
+        }
+        ion-card-content {
+            text-align: center;
+            color: black;
+                text-transform: uppercase;
+                border-radius: 25px;
+                border-bottom: 2px solid gray;
+                
+        }
+    }
+    ion-spinner {
+        transform: scale(2);
+        top: 40%;
+        left: 50%;
+
+    }
+}

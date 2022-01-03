@@ -1,0 +1,24 @@
+<span class="rooms">Rooms</span>
+<ion-button (click)="swipeNext()"  class="next" ><ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+<ion-button (click)="swipePrev()"  class="back" ><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+<ion-slides #mySlider>
+  <ion-slide *ngFor="let item of room">
+    <ion-card
+    [routerLink]="['/room-details/',item?._id]"
+    >
+      <ion-card-title>
+        <div>
+          <img [src]="item?.head_image" alt="">
+          <span>{{item.name}}</span>
+        </div>
+      </ion-card-title>
+
+      <ion-card-content>
+        {{item.description}}
+      </ion-card-content>
+      
+    </ion-card>
+
+  </ion-slide>
+
+</ion-slides>

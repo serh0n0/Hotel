@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><img [src]="logo " alt=""></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ng-container *ngIf="about">
+
+  
+  <app-images
+   [images]="images"
+  >
+
+  </app-images>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        about US
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{text}}
+    </ion-card-content>
+  </ion-card>
+  
+<app-footer></app-footer>
+</ng-container>
+<ng-container *ngIf="!about">
+<ion-spinner name="circles"></ion-spinner>
+
+</ng-container>
+
+  
+</ion-content>

@@ -1,0 +1,49 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contact</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="contact">
+
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.2377318697872!2d30.701841515250088!3d36.884660679931294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39112539c30b3%3A0xd49c1cd6ede650ea!2sKalei%C3%A7i%20Marina%20Boutique%20Hotel%20%26%20Restaurant!5e0!3m2!1str!2str!4v1640690879247!5m2!1str!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <div class="container">
+    <h2>CONTACT</h2>
+    <div class="card">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <span class="subtitle">Phone Number</span>
+      <div class="text">{{contactText?.phone}}</div>
+    </div>
+    <div class="card">
+      <ion-icon name="location-outline"></ion-icon>
+      <span class="subtitle">Adress</span>
+      <div class="text">{{contactText?.location}}</div>
+    </div>
+    <div class="card">
+      <ion-icon name="mail-outline"></ion-icon>
+      <span class="subtitle">Mail</span>
+      <div class="text">{{contactText?.mail}}</div>
+    </div>
+  </div>
+  <div class="logo">
+    <a [href]="contactText?.facebook" target="blank">
+      <ion-icon name="logo-facebook"> </ion-icon>
+    </a>
+    <a [href]="contactText?.instagram" target="blank">
+      <ion-icon name="logo-instagram"> </ion-icon>
+    </a>
+  </div>
+  <app-footer></app-footer>
+</ng-container>
+<ng-container *ngIf="!contact">
+  <ion-spinner name="circles"></ion-spinner>
+
+</ng-container>
+
+</ion-content>

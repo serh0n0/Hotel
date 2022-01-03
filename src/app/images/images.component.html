@@ -1,0 +1,23 @@
+<div class="container" *ngIf="images">
+  <div class="galleries">
+    <div class="header-img">
+      <ng-container *ngIf="!headerImage?.length">
+        <img [src]="images?.images[0]">
+      </ng-container>
+      <ng-container *ngIf="headerImage?.length">
+        <img [src]="headerImage">
+      </ng-container>
+    </div>
+    <ion-slides [options]="sliderOpts">
+      <ion-slide *ngFor="let item of images?.images">
+        <div class="gallery"> 
+          <img [src]="item" (click)="changeImage(item)">
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</div>
+<ng-container *ngIf="!images">
+<ion-spinner name="circles"></ion-spinner>
+  
+</ng-container>

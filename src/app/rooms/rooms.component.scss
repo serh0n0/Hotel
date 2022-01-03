@@ -1,0 +1,44 @@
+:host {
+  .rooms {
+    margin-left: 40%;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .next {
+    position: absolute;
+    left: 80%;
+    top: 209%;
+    padding: 5px;
+    z-index: 3;
+    --background: black;
+    --background-activated: none;
+  }
+  .back {
+    position: absolute;
+    top: 209%;
+    padding: 5px;
+    left: 5%;
+    z-index: 3;
+    --background: black;
+    --background-activated: none;
+          
+  }}
+  ion-slides {
+
+  ion-card-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div {
+      position: relative;
+    img {
+      width: 382px;
+      height: 179px;
+    }
+    span {
+    color: black;
+    font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+:host {
+    ion-menu {
+      ion-content {
+        ion-list {
+          margin-left: 10px;
+          ion-item {
+            width: 90%;
+            margin-top: 10px;
+            --background: #f2f3f5;
+          }
+          ion-item:hover {
+            --background: #1f1f1f;
+            ion-icon {
+              color: white;
+            }
+            ion-label {
+              color: white;
+            }
+          }
+        }
+      }
+      strong {
+        margin-left: 40%;
+      }
+    }
+  }

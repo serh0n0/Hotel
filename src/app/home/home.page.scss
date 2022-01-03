@@ -1,0 +1,79 @@
+:host {
+  ion-content {
+
+    
+    div {
+      width: 100%;
+      height: 280px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+     
+    }
+    
+  }
+  .title {
+    left: -2%;
+    margin-left: 40%;
+    position: absolute;
+    top: 138%;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .back {
+    position: absolute;
+    z-index: 2;
+    top: 160%;
+    left: 5%;
+    padding: 5px;
+    --background: black;
+    --background-activated: none;
+
+  }
+  .next {
+    position: absolute;
+    z-index: 2;
+    padding: 5px;
+    top: 160%;
+    left: 80%;
+    --background: black;
+    --background-activated: none;
+  }
+
+  ion-slides {
+    ::ng-deep {
+      .swiper-pagination-bullet-active {
+        background-color: magenta;
+      }
+      .swiper-pagination-bullet {
+        background-color: white;
+      }
+    }
+  }
+  ion-item {
+    margin-bottom: 20px;
+  }
+  ion-spinner {
+    transform: scale(2);
+    top: 40%;
+    left: 50%;
+
+}
+ion-slides {
+  img {
+    width: 382px;
+    height: 179px;
+    object-fit: cover;
+  }
+  ion-card-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  span {
+    color: black;
+    font-weight: 700;
+  }
+}
+}
